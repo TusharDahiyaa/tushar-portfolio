@@ -55,7 +55,7 @@ const MainHeader: React.FC = () => {
     "I love creating websites and gaming, doing freelance work and focusing on amazing UI designs for digital products. ❤️";
 
   return (
-    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-10">
+    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-40">
       <div className="md:flex items-center justify-between mx-auto w-[95%] md:w-[70%]">
         <div className="text-center mx-auto w-[80%] md:w-[80%]">
           <h1 className="w-full font-semibold mb-5">
@@ -68,7 +68,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-2 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
+              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
                 Resume <MdFileDownload />
               </button>
             </a>
@@ -77,7 +77,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-2 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
+              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
                 Github <FaGithub />
               </button>
             </a>
@@ -86,7 +86,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-2 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
+              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
                 LinkedIn <FaLinkedin />
               </button>
             </a>
@@ -95,7 +95,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-2 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
+              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors">
                 Twitter <FaXTwitter />
               </button>
             </a>
