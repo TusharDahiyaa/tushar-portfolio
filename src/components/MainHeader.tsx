@@ -55,7 +55,7 @@ const MainHeader: React.FC = () => {
     "I love creating websites and gaming, doing freelance work and focusing on amazing UI designs for digital products. ❤️";
 
   return (
-    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-40">
+    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-40 md:pt-32">
       <div className="md:flex items-center justify-between mx-auto w-[95%] md:w-[70%]">
         <div className="text-center mx-auto w-[80%] md:w-[80%]">
           <h1 className="w-full font-semibold mb-5">
