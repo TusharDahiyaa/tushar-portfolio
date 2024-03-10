@@ -29,7 +29,7 @@ function App() {
       <div id="header" ref={homeRef}>
         <MainHeader />
       </div>
-      <div id="about" ref={aboutRef} className="pt-16">
+      <div id="about" ref={aboutRef} className="pt-20">
         <About />
       </div>
       <div id="skills" ref={skillsRef} className="pt-16">

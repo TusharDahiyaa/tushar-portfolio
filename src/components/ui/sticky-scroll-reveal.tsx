@@ -62,13 +62,13 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[40rem] md:h-[30rem] w-[90%] md:w-[70%] mx-auto overflow-y-auto md:flex justify-center relative space-x-10 rounded-xl p-10 scrollHidden"
+      className="overflow-hidden h-[40rem] md:h-[30rem] w-[95%] md:w-[70%] mx-auto overflow-y-auto md:flex justify-center relative md:space-x-10 rounded-xl p-2 md:p-10 scrollHidden"
       ref={scrollContainerRef}
     >
       <div className="relative md:flex items-start px-4 md:w-[60%]">
         <div className="md:max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="mt-20 mb-32">
+            <div key={item.title + index} className="pt-16 pb-20">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -87,11 +87,11 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 mt-10"
+                className="text-base text-slate-300 mt-10"
               >
                 {item.description}
               </motion.p>
-              <div className="flex space-x-4 my-10">
+              <div className="flex space-x-4 mt-10">
                 <motion.button
                   initial={{
                     opacity: 0,
@@ -150,10 +150,10 @@ export const StickyScroll = ({
       </div>
       <SparklesCore
         background={backgroundColors[activeCard % backgroundColors.length]}
-        minSize={0.1}
+        minSize={0.02}
         maxSize={0.7}
-        particleDensity={500}
-        className="w-full absolute h-lvh scale-[200%] top-80"
+        particleDensity={window.innerWidth < 400 ? 1500 : 2000}
+        className="absolute scale-y-[420%] scale-x-[500%] md:scale-x-[400%] md:scale-y-[520%] inset-x-0 inset-y-0"
         particleColor="#FFFFFF"
       />
     </motion.div>

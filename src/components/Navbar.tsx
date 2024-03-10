@@ -37,8 +37,8 @@ const Navbar = ({ onNavClick, navRefs }: any) => {
   ];
 
   return (
-    <nav className="navbar fixed inset-x-0 flex items-center justify-center z-50">
-      <ul className="flex items-center gap-3 md:gap-10 justify-around text-md w-fit mx-auto bg-stone-800 px-2 md:px-4 py-2 rounded-full my-2 box">
+    <nav className="navbar fixed inset-x-0 flex items-center justify-center z-50 text-xs md:text-base">
+      <ul className="flex items-center gap-2 md:gap-10 justify-around text-md w-fit mx-auto bg-stone-800 px-2 md:px-4 md:py-2 rounded-full my-2 box">
         {navItems.map((item) => (
           <li key={item.label} className="flex items-center">
             <a
