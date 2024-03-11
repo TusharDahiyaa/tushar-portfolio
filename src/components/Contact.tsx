@@ -38,7 +38,6 @@ export function Contact() {
         formData
       );
 
-      console.log(response.data);
       if (response.data.success === true) {
         Report.success(
           "Holaaa!",
