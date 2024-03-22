@@ -64,7 +64,7 @@ const MainHeader: React.FC = () => {
           <TextGenerateEffect words={paragraphHeader} />
           <div className="flex items-center mt-5 justify-center flex-wrap gap-1 lg:gap-0">
             <a
-              href="https://drive.google.com/file/d/1TajNBWCjr2mFMfy4FuXHFD95q4LWSX9U/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ZGbmOL9_4S7cg-rk71Aqkr4X66KPbGO7/view?usp=sharing"
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
