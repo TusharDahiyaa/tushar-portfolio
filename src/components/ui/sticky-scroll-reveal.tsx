@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-import { SparklesCore } from "./sparkles";
 
 export const StickyScroll = ({
   content,
@@ -148,14 +147,6 @@ export const StickyScroll = ({
           </p>
         </motion.div>
       </div>
-      <SparklesCore
-        background={backgroundColors[activeCard % backgroundColors.length]}
-        minSize={0.02}
-        maxSize={0.7}
-        particleDensity={window.innerWidth < 400 ? 1500 : 2000}
-        className="absolute scale-y-[420%] scale-x-[500%] md:scale-x-[400%] md:scale-y-[520%] inset-x-0 inset-y-0"
-        particleColor="#FFFFFF"
-      />
     </motion.div>
   );
 };
