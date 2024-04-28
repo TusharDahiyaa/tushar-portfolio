@@ -58,7 +58,7 @@ export const Projects: React.FC = () => {
         waveWidth={80}
         backgroundFill="transparent"
         blur={8}
-        speed={window.innerWidth > 450 ? "fast" : "slow"}
+        speed="slow"
         waveOpacity={0.5}
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-var text-center my-10">

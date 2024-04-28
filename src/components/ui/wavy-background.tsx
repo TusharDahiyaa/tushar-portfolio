@@ -11,7 +11,7 @@ export const WavyBackground = ({
   waveWidth,
   backgroundFill,
   blur = 10,
-  speed = "fast",
+  speed,
   waveOpacity = 0.5,
   ...props
 }: {
@@ -89,7 +89,7 @@ export const WavyBackground = ({
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
     ctx.clearRect(0, 0, w, h);
-    drawWave(5);
+    drawWave(3);
     animationId = requestAnimationFrame(render);
   };
 

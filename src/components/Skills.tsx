@@ -150,12 +150,12 @@ const Skills: React.FC = () => {
             {type}
           </button>
         ))}
-        <p className="mt-5 text-sm md:text-xl flex items-center">
-          <FaLongArrowAltUp />
-          Filter by Skill Type
-          <FaLongArrowAltUp />
-        </p>
       </div>
+      <p className="mt-5 text-sm md:text-xl flex items-center justify-center">
+        <FaLongArrowAltUp />
+        Filter by Skill Type
+        <FaLongArrowAltUp />
+      </p>
       <div className=" w-[80%] md:w-[60%] mx-auto md:my-10">
         <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-evenly">
           {filteredSkills?.map((skill: any) => (
