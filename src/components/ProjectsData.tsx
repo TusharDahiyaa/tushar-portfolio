@@ -1,5 +1,13 @@
 const projectsData = [
   {
+    img: "./images/cosgram.png",
+    title: "Cosgram - Social Media",
+    description: `Cosgram is built and designed with React and Firebase integration to provide a seamless and engaging social media experience for users on both mobile and desktop devices.
+    Its fully responsive design ensures a smooth transition between platforms, allowing users to connect and share effortlessly.`,
+    githubLink: "https://github.com/TusharDahiyaa/cosgram",
+    liveLink: "https://cosgram.vercel.app",
+  },
+  {
     img: "./images/playtechinsider.jpg",
     title: "Play Tech Insider",
     description: `Level up your tech game with this immersive e-commerce experience, built with cutting-edge MERN stack technology.
