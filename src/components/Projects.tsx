@@ -51,20 +51,9 @@ export const Projects: React.FC = () => {
 
   return (
     <div className="">
-      <WavyBackground
-        className=""
-        containerClassName=""
-        colors={["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]}
-        waveWidth={80}
-        backgroundFill="transparent"
-        blur={8}
-        speed="slow"
-        waveOpacity={0.5}
-      >
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-var text-center my-10">
-          Projects
-        </h1>
-      </WavyBackground>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-var text-center my-10 bg-gradient-to-r from-indigo-500 via-stone-800 to-indigo-500 rounded-full py-5 px-20 mx-auto w-fit">
+        Projects
+      </h1>
       <div className="">
         <StickyScroll content={content} />
       </div>

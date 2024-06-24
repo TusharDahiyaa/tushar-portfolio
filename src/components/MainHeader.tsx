@@ -62,9 +62,9 @@ const MainHeader: React.FC = () => {
             <TypewriterEffect words={words} />
           </h1>
           <TextGenerateEffect words={paragraphHeader} />
-          <div className="flex items-center mt-5 justify-center flex-wrap gap-1 lg:gap-0">
+          <div className="flex items-center mt-5 justify-center flex-wrap gap-1 lg:gap-5">
             <a
-              href="https://drive.google.com/file/d/1ZGbmOL9_4S7cg-rk71Aqkr4X66KPbGO7/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ezA6XmVCpwZ7y3haGxVcHMTYNtGole4Y/view?usp=sharing"
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
@@ -101,11 +101,6 @@ const MainHeader: React.FC = () => {
             </a>
           </div>
         </div>
-        <img
-          src="./header-image.jpg"
-          alt=""
-          className="rounded-full border-2 p-2 md:mx-20 border-zinc-300 movement text-center z-20 w-60 h-60 mx-auto mt-5 md:mt-0 md:w-80 md:h-80"
-        />
       </div>
       <BackgroundBeams />
     </div>
