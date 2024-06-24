@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { WavyBackground } from "./ui/wavy-background";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import projectsData from "./ProjectsData";
 import { BackgroundGradient } from "./ui/background-gradient";
