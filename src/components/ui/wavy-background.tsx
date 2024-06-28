@@ -10,7 +10,7 @@ export const WavyBackground = ({
   colors,
   waveWidth,
   backgroundFill,
-  blur = 10,
+  blur = 20,
   speed,
   waveOpacity = 0.5,
   ...props
@@ -35,16 +35,6 @@ export const WavyBackground = ({
     ctx: any,
     canvas: any;
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const getSpeed = () => {
-    switch (speed) {
-      case "slow":
-        return 0.01;
-      case "fast":
-        return 0.02;
-      default:
-        return 0.01;
-    }
-  };
 
   const init = () => {
     canvas = canvasRef.current;
@@ -58,18 +48,18 @@ export const WavyBackground = ({
       h = ctx.canvas.height = window.innerHeight;
       ctx.filter = `blur(${blur}px)`;
     };
-    render();
+    drawWave(4);
   };
 
   const waveColors = colors ?? [
-    "#38bdf8",
-    "#818cf8",
-    "#c084fc",
-    "#e879f9",
     "#22d3ee",
+    "#818cf8",
+    "#e879f9",
+    "#f6416c",
+    "#c084fc",
+    "#e83e8c",
   ];
   const drawWave = (n: number) => {
-    nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
       ctx.lineWidth = waveWidth || 50;
@@ -83,21 +73,8 @@ export const WavyBackground = ({
     }
   };
 
-  let animationId: number;
-  const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
-    ctx.globalAlpha = waveOpacity || 0.5;
-    ctx.fillRect(0, 0, w, h);
-    ctx.clearRect(0, 0, w, h);
-    drawWave(3);
-    animationId = requestAnimationFrame(render);
-  };
-
   useEffect(() => {
     init();
-    return () => {
-      cancelAnimationFrame(animationId);
-    };
   }, []);
 
   const [isSafari, setIsSafari] = useState(false);

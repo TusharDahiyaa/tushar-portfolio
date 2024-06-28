@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import projectsData from "./ProjectsData";
 import { BackgroundGradient } from "./ui/background-gradient";
+import { WavyBackground } from "./ui/wavy-background";
 
 export const Projects: React.FC = () => {
   interface ProjectContent {
@@ -50,9 +51,11 @@ export const Projects: React.FC = () => {
 
   return (
     <div className="">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-var text-center my-10 bg-gradient-to-r from-indigo-500 via-stone-800 to-indigo-500 rounded-full py-5 px-20 mx-auto w-fit">
-        Projects
-      </h1>
+      <WavyBackground>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold inter-var text-center my-5">
+          Projects
+        </h1>
+      </WavyBackground>
       <div className="">
         <StickyScroll content={content} />
       </div>
