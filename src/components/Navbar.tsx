@@ -1,8 +1,17 @@
-import { useState, useEffect } from "react";
+import { RefObject, useEffect, useState } from "react";
+
+type NavRefs = {
+  homeRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement>;
+  skillsRef: RefObject<HTMLDivElement>;
+  servicesRef: RefObject<HTMLDivElement>;
+  projectsRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
+};
 
 const Navbar = ({ onNavClick, navRefs }: any) => {
   const [currentPath, setCurrentPath] = useState<string>(
-    window.location.pathname
+    window.location.pathname,
   );
 
   useEffect(() => {
@@ -20,9 +29,10 @@ const Navbar = ({ onNavClick, navRefs }: any) => {
   const handleNavLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     ref: React.RefObject<HTMLDivElement>,
-    to: string
+    to: string,
   ) => {
     event.preventDefault();
+    window.history.pushState({}, "", to);
     onNavClick(ref);
     setCurrentPath(to);
   };
@@ -31,6 +41,7 @@ const Navbar = ({ onNavClick, navRefs }: any) => {
     { label: "Home", to: "/", ref: navRefs.homeRef },
     { label: "About", to: "/about", ref: navRefs.aboutRef },
     { label: "Skills", to: "/skills", ref: navRefs.skillsRef },
+    { label: "Services", to: "/services", ref: navRefs.servicesRef },
     { label: "Projects", to: "/projects", ref: navRefs.projectsRef },
     { label: "Contact", to: "/contact", ref: navRefs.contactRef },
   ];

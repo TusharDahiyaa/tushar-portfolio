@@ -7,11 +7,13 @@ import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
 import Footer from "./components/Footer";
 import { useRef } from "react";
+import Services from "./components/Services";
 
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
+  const servicesRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -25,7 +27,14 @@ function App() {
     <>
       <Navbar
         onNavClick={handleNavClick}
-        navRefs={{ homeRef, aboutRef, skillsRef, projectsRef, contactRef }}
+        navRefs={{
+          homeRef,
+          aboutRef,
+          skillsRef,
+          servicesRef,
+          projectsRef,
+          contactRef,
+        }}
       />
       <div id="header" ref={homeRef}>
         <MainHeader />
@@ -35,6 +44,9 @@ function App() {
       </div>
       <div id="skills" ref={skillsRef} className="pt-16">
         <Skills />
+      </div>
+      <div id="services" ref={servicesRef} className="pt-16">
+        <Services />
       </div>
       <div id="projects" ref={projectsRef} className="pt-16">
         <Projects />

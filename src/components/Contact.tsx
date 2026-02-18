@@ -20,7 +20,7 @@ export function Contact() {
           <div className="group">
             <p className="text-neutral-500 text-sm mb-1">Email</p>
             <a
-              href="mailto:tushar@yourdomain.com"
+              href="mailto:primary.techops@gmail.com"
               className="font-semibold text-neutral-800 dark:text-neutral-100 underline underline-offset-4 
                            decoration-neutral-400 group-hover:decoration-neutral-600
                            transition-colors"
