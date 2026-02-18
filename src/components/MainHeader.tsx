@@ -1,58 +1,28 @@
 import React from "react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import { MdFileDownload } from "react-icons/md";
+// import { MdFileDownload } from "react-icons/md";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BackgroundBeams } from "./ui/background-beams";
+import { motion } from "framer-motion";
 
 const MainHeader: React.FC = () => {
   const words = [
-    {
-      text: "Hello",
-    },
-    {
-      text: "I'm",
-    },
-    {
-      text: "Tushar",
-    },
-    {
-      text: "Dahiya.",
-    },
-    {
-      text: "I'm",
-    },
-    {
-      text: "a",
-    },
-    {
-      text: "full",
-    },
-    {
-      text: "stack",
-    },
-    {
-      text: "developer",
-    },
-    {
-      text: "based",
-    },
-    {
-      text: "in",
-    },
-    {
-      text: "India",
-      className:
-        "bg-clip-text text-transparent bg-gradient-to-b from-[#FF671F] via-[#d4d4d8] to-[#046A38]",
-    },
-    {
-      text: "!",
-    },
+    { text: "I" },
+    { text: "build" },
+    { text: "Full-Stack" },
+    { text: "Systems" },
+    { text: "and" },
+    { text: "AI" },
+    { text: "Automations" },
+    { text: "for" },
+    { text: "Real" },
+    { text: "Businesses." },
   ];
 
   const paragraphHeader =
-    "I love creating websites and gaming, doing freelance work and focusing on amazing UI designs for digital products. ❤️";
+    "I design scalable web platforms and AI-driven automations that reduce manual work, streamline operations, and drive measurable business growth.";
 
   return (
     <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-52 md:pt-20">
@@ -62,16 +32,25 @@ const MainHeader: React.FC = () => {
             <TypewriterEffect words={words} />
           </h1>
           <TextGenerateEffect words={paragraphHeader} />
+          <motion.p
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="mt-5 text-sm font-semibold tracking-wide text-neutral-400"
+          >
+            Real Estate Platforms • CRM & CMS Systems • AI Workflow Automation
+          </motion.p>
+
           <div className="flex items-center mt-5 justify-center flex-wrap gap-1 lg:gap-5">
-            <a
-              href="https://drive.google.com/file/d/1jlDOsqsHjzHFyp-M5ryj4yt1-VaiRMuk/view?usp=sharing"
+            {/* <a
+              href="https://drive.google.com/file/d/1K_bIqhOTzCMbIeWsxdWJJFlHvPm6NbtU/view?usp=sharing"
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
               <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium text-slate-200 transition-colors">
                 Resume <MdFileDownload />
               </button>
-            </a>
+            </a> */}
             <a
               href="https://github.com/tushardahiyaa"
               target="_blank"

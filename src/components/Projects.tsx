@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
           link: project.githubLink,
         },
         button2: {
-          text: "Live Site",
+          text: "View Platform",
           link: project.liveLink,
         },
         content: (
@@ -39,11 +39,11 @@ export const Projects: React.FC = () => {
             <img
               src={project.img}
               alt={project.title}
-              className="h-56 w-80 rounded-[22px]"
+              className="h-56 w-80 object-cover rounded-[22px]"
             />
           </BackgroundGradient>
         ),
-      })
+      }),
     );
 
     setContent(projectContents);

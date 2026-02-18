@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { ModeToggle } from "./mode-toggle";
 
 const Navbar = ({ onNavClick, navRefs }: any) => {
   const [currentPath, setCurrentPath] = useState<string>(
@@ -54,7 +53,6 @@ const Navbar = ({ onNavClick, navRefs }: any) => {
             </a>
           </li>
         ))}
-        <ModeToggle />
       </ul>
     </nav>
   );

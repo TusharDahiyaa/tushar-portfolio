@@ -3,36 +3,42 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <div className="text-center w-[80%] md:w-[60%] mx-auto">
-      <h1 className=" text-3xl md:text-5xl my-10 font-bold">About Me 🧘‍♂️</h1>
-      <p className="md:text-lg text-pretty mb-10">
-        Hey there! 👋 I'm Tushar Dahiya, a full-stack web developer from India.
-        By day, I'm a freelancer, and I've sharpened my skills at the{" "}
-        <a
-          href="https://www.credential.net/79667545-557f-46c8-91d0-d6e58e0edf0f"
-          target="_blank"
-          className="bg-stone-400 bg-opacity-40 px-1 rounded-lg"
-        >
-          MERN stack bootcamp from Upgrad.
-        </a>{" "}
-        Right now, I'm diving deep into the coding world as part of the 100xdevs
-        Cohort, soaking up knowledge like a sponge. I love that eureka moment
-        when everything clicks into place while solving problems.
+      <h1 className="text-3xl md:text-5xl my-10 font-bold">About Me</h1>
+
+      <p className="md:text-lg text-pretty mb-8">
+        I’m Tushar Dahiya, a full-stack developer based in India, focused on
+        building production-ready web platforms and AI-powered automations for
+        real businesses. I work at the intersection of engineering, systems
+        design, and operational efficiency.
       </p>
-      <p className="md:text-lg text-pretty mb-10">
-        My tech toolkit includes{" "}
+
+      <p className="md:text-lg text-pretty mb-8">
+        My background includes formal MERN stack training and advanced system
+        design work, but my real strength lies in applying technology to solve
+        practical problems. I’ve built role-based platforms, inbuilt CMS
+        systems, automation workflows, and scalable backends used in real estate
+        and service-based businesses.
+      </p>
+
+      <p className="md:text-lg text-pretty mb-8">
+        My core stack includes{" "}
         <span className="font-mono bg-zinc-500 bg-opacity-40 px-1 rounded-lg">
-          React, Next.js, Node.js and MongoDB/PostgreSQL, with TypeScript and
-          Prisma
-        </span>{" "}
-        adding that extra touch of magic. I'm always on the hunt for new tech to
-        explore. Currently, I'm on the lookout for a full-time gig as a
-        full-stack developer and ready to bring my A-game to any team.
+          React, Next.js, Node.js, PostgreSQL/MongoDB, TypeScript, Prisma
+        </span>
+        , with a strong focus on clean architecture, performance, and
+        maintainability. Increasingly, my work involves AI-driven automation to
+        reduce manual operations and improve decision-making.
       </p>
+
       <p className="md:text-lg text-pretty mb-10">
-        When I'm not coding, you'll find me gaming, binging on movies, or just
-        hanging out. Like Curious George, I'm always excited for the next tech
-        adventure. 🐒✨
+        I prefer building systems that scale, automate repetitive work, and
+        directly impact revenue or efficiency. If a project doesn’t solve a real
+        problem, I’m usually not interested.
       </p>
+
+      <h2 className="text-xl md:text-2xl my-5 font-bold">
+        Custom web platforms, internal tools, and AI automation systems.
+      </h2>
     </div>
   );
 };

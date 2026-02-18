@@ -1,5 +1,25 @@
 const projectsData = [
   {
+    img: "./images/a1brotherscleaning.png",
+    title: "A1 Brothers Cleaning Services",
+    description: `A professional service-based business website built for lead generation and local SEO. 
+    Developed using React and Node.js with optimized performance, structured schema markup, 
+    Google Business Profile integration, and conversion-focused UI. 
+    Includes service pages, contact forms, booking inquiries, and mobile-first responsive design.`,
+    githubLink: "https://github.com/primarytechops/brothers-cleaning",
+    liveLink: "https://www.a1brotherscleaning.com",
+  },
+  {
+    img: "./images/skylinerealty.png",
+    title: "Skyline Realty with CMS",
+    description: `A full-featured real estate platform with role-based authentication including Admin, Agent, and User logins. 
+    Built with MERN stack, featuring an inbuilt CMS for dynamic property management, image uploads, agent dashboards, 
+    property approvals, and secure authentication. Includes SEO optimization, protected routes, and scalable backend architecture 
+    designed for real-world deployment.`,
+    githubLink: "https://github.com/TusharDahiyaa/skyline-realty",
+    liveLink: "https://skylinerealestate.vercel.app",
+  },
+  {
     img: "./images/cosgram.png",
     title: "Cosgram - Social Media",
     description: `Cosgram is built and designed with React and Firebase integration to provide a seamless and engaging social media experience for users on both mobile and desktop devices.
@@ -15,13 +35,6 @@ const projectsData = [
       Customize your tech journey with personalized dashboards, connect with fellow enthusiasts, and discover exclusive deals.`,
     githubLink: "https://github.com/TusharDahiyaa/playtechinsider.git",
     liveLink: "https://playtechinsider.onrender.com",
-  },
-  {
-    img: "./images/skylinerealty_img.jpg",
-    title: "Skyline Realty",
-    description: `Realtor website focused on business growth and audience outreach.Built using HTML, CSS, JavaScript, Bootstrap for frontend and Node.js and Express for backend.This page boasts 100% SEO optimization and a perfect score in best practices according to Google Page Insights.`,
-    githubLink: "https://github.com/TusharDahiyaa/skylinerealty",
-    liveLink: "https://helloskylinerealty.vercel.app",
   },
   {
     img: "./images/cardify.jpg",

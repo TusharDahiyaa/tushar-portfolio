@@ -1,115 +1,101 @@
 import React, { useState } from "react";
-import { FaLongArrowAltUp } from "react-icons/fa";
+// import { FaLongArrowAltUp } from "react-icons/fa";
 import DetailedSkill from "./DetailedSkill";
 
 const Skills: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string | undefined>("");
 
   const skillsArray = [
+    // Core Languages
     {
       skillName: "JavaScript",
       imageLink: "./SkillsImages/js.png",
-      typeOfSkill: "Programming Language",
+      typeOfSkill: "Core Languages",
     },
     {
       skillName: "TypeScript",
       imageLink: "./SkillsImages/typescript.png",
-      typeOfSkill: "Programming Language",
+      typeOfSkill: "Core Languages",
     },
-    {
-      skillName: "HTML",
-      imageLink: "./SkillsImages/html.png",
-      typeOfSkill: "Frontend Development",
-    },
-    {
-      skillName: "CSS",
-      imageLink: "./SkillsImages/css-3.png",
-      typeOfSkill: "Frontend Development",
-    },
+
+    // Frontend Systems
     {
       skillName: "React",
       imageLink: "./SkillsImages/react.svg",
-      typeOfSkill: "Frontend Development",
+      typeOfSkill: "Frontend Systems",
     },
     {
       skillName: "Next.js",
       imageLink: "./SkillsImages/next-js.svg",
-      typeOfSkill: "Frontend Development",
+      typeOfSkill: "Frontend Systems",
     },
     {
-      skillName: "Node.js",
-      imageLink: "./SkillsImages/node-js.png",
-      typeOfSkill: "Backend Development",
-    },
-    {
-      skillName: "Git",
-      imageLink: "./SkillsImages/git.png",
-      typeOfSkill: "Version Control",
-    },
-    {
-      skillName: "Tailwind",
+      skillName: "Tailwind CSS",
       imageLink: "./SkillsImages/tailwind-css.svg",
-      typeOfSkill: "CSS Framework",
+      typeOfSkill: "Frontend Systems",
     },
     {
       skillName: "Bootstrap",
       imageLink: "./SkillsImages/bootstrap.png",
-      typeOfSkill: "CSS Framework",
+      typeOfSkill: "Frontend Systems",
     },
+
+    // Backend & APIs
     {
-      skillName: "Prisma",
-      imageLink: "./SkillsImages/prisma.png",
-      typeOfSkill: "Database",
-    },
-    {
-      skillName: "MongoDB",
-      imageLink: "./SkillsImages/mongodb.png",
-      typeOfSkill: "Database",
-    },
-    {
-      skillName: "Recoil",
-      imageLink: "./SkillsImages/recoil.svg",
-      typeOfSkill: "Frontend Development",
-    },
-    {
-      skillName: "Docker",
-      imageLink: "./SkillsImages/docker.png",
-      typeOfSkill: "Deployment",
+      skillName: "Node.js",
+      imageLink: "./SkillsImages/node-js.png",
+      typeOfSkill: "Backend & APIs",
     },
     {
       skillName: "Express",
       imageLink: "./SkillsImages/express.png",
-      typeOfSkill: "Backend Development",
+      typeOfSkill: "Backend & APIs",
     },
+
+    // Databases & Data Layer
     {
       skillName: "PostgreSQL",
       imageLink: "./SkillsImages/postgresql.png",
-      typeOfSkill: "Database",
+      typeOfSkill: "Databases & Data Layer",
     },
     {
-      skillName: "MYSQL",
+      skillName: "MongoDB",
+      imageLink: "./SkillsImages/mongodb.png",
+      typeOfSkill: "Databases & Data Layer",
+    },
+    {
+      skillName: "MySQL",
       imageLink: "./SkillsImages/mysql.png",
-      typeOfSkill: "Database",
+      typeOfSkill: "Databases & Data Layer",
     },
     {
-      skillName: "Figma",
-      imageLink: "./SkillsImages/figma.png",
-      typeOfSkill: "Design",
+      skillName: "Prisma",
+      imageLink: "./SkillsImages/prisma.png",
+      typeOfSkill: "Databases & Data Layer",
+    },
+
+    // DevOps & Infrastructure
+    {
+      skillName: "Docker",
+      imageLink: "./SkillsImages/docker.png",
+      typeOfSkill: "DevOps & Infrastructure",
     },
     {
-      skillName: "Photoshop",
-      imageLink: "./SkillsImages/photoshop.svg",
-      typeOfSkill: "Design",
+      skillName: "Git",
+      imageLink: "./SkillsImages/git.png",
+      typeOfSkill: "DevOps & Infrastructure",
     },
+
+    // Automation & Tooling
     {
-      skillName: "Canva",
-      imageLink: "./SkillsImages/canva.svg",
-      typeOfSkill: "Design",
+      skillName: "AI Automation",
+      imageLink: "./SkillsImages/workflow_pilot_logo.png",
+      typeOfSkill: "Automation & Tooling",
     },
   ];
 
   const uniqueSkillTypes = new Set(
-    skillsArray.map((skill) => skill.typeOfSkill)
+    skillsArray.map((skill) => skill.typeOfSkill),
   );
 
   const filterSkills = (type?: string) => {
@@ -126,7 +112,7 @@ const Skills: React.FC = () => {
   return (
     <div className="mb-24">
       <h1 className="text-center text-3xl md:text-5xl font-bold mt-8">
-        Skills ⚙️
+        Technical Skillset
       </h1>
       <div className="flex justify-center mb-4 md:w-[70%] mx-auto rounded-2xl my-10 flex-wrap gap-4 md:gap-1 text-xs md:text-sm">
         <button
@@ -151,13 +137,13 @@ const Skills: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-5 text-sm md:text-xl flex items-center justify-center">
+      {/* <p className="mt-5 text-sm md:text-xl flex items-center justify-center">
         <FaLongArrowAltUp />
         Filter by Skill Type
         <FaLongArrowAltUp />
-      </p>
+      </p> */}
       <div className=" w-[80%] md:w-[60%] mx-auto md:my-10">
-        <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-evenly">
+        <div className="grid grid-flow-row grid-cols-2 xl:grid-cols-4 md:grid-cols-3 lg:grid-cols-3 gap-2 justify-evenly">
           {filteredSkills?.map((skill: any) => (
             <DetailedSkill
               key={skill.skillName}

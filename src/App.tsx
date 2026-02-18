@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "./components/Navbar";
 import MainHeader from "./components/MainHeader";
 import "./App.css";
@@ -20,8 +19,10 @@ function App() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  document.documentElement.classList.add("dark");
+
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <>
       <Navbar
         onNavClick={handleNavClick}
         navRefs={{ homeRef, aboutRef, skillsRef, projectsRef, contactRef }}
@@ -42,7 +43,7 @@ function App() {
         <Contact />
       </div>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }
 
