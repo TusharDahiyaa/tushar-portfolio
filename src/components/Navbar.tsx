@@ -1,13 +1,4 @@
-import { RefObject, useEffect, useState } from "react";
-
-type NavRefs = {
-  homeRef: RefObject<HTMLDivElement>;
-  aboutRef: RefObject<HTMLDivElement>;
-  skillsRef: RefObject<HTMLDivElement>;
-  servicesRef: RefObject<HTMLDivElement>;
-  projectsRef: RefObject<HTMLDivElement>;
-  contactRef: RefObject<HTMLDivElement>;
-};
+import { useEffect, useState } from "react";
 
 const Navbar = ({ onNavClick, navRefs }: any) => {
   const [currentPath, setCurrentPath] = useState<string>(
