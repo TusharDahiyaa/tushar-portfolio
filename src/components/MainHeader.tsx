@@ -25,7 +25,7 @@ const MainHeader: React.FC = () => {
     "I design scalable web platforms and AI-driven automations that reduce manual work, streamline operations, and drive measurable business growth.";
 
   return (
-    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-52 md:pt-20">
+    <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-20 md:pt-20">
       <div className="md:flex items-center justify-between mx-auto w-[90%] md:w-[70%]">
         <div className="text-center mx-auto w-[90%] md:w-[80%]">
           <h1 className="w-full font-semibold mb-5">
@@ -36,7 +36,7 @@ const MainHeader: React.FC = () => {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="mt-5 text-sm font-semibold tracking-wide text-neutral-400"
+            className="mt-5 text-xs md:text-sm font-semibold tracking-wide text-neutral-400"
           >
             Real Estate Platforms • CRM & CMS Systems • AI Workflow Automation
           </motion.p>
@@ -56,7 +56,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium text-slate-200 transition-colors">
+              <button className="mx-0.5 md:mx-1 inline-flex gap-1 md:gap-2 h-10 md:h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-2 md:px-4 font-medium text-slate-200 transition-colors">
                 Github <FaGithub />
               </button>
             </a>
@@ -65,7 +65,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium text-slate-200 transition-colors">
+              <button className="mx-0.5 md:mx-1 inline-flex gap-1 md:gap-2 h-10 md:h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-2 md:px-4 font-medium text-slate-200 transition-colors">
                 LinkedIn <FaLinkedin />
               </button>
             </a>
@@ -74,7 +74,7 @@ const MainHeader: React.FC = () => {
               target="_blank"
               className="hover:scale-110 transition-all ease-in-out z-20"
             >
-              <button className="mx-1 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 font-medium text-slate-200 transition-colors">
+              <button className="mx-0.5 md:mx-1 inline-flex gap-1 md:gap-2 h-10 md:h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-2 md:px-4 font-medium text-slate-200 transition-colors">
                 Twitter <FaXTwitter />
               </button>
             </a>

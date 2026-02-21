@@ -92,6 +92,11 @@ const Skills: React.FC = () => {
       imageLink: "./SkillsImages/workflow_pilot_logo.png",
       typeOfSkill: "Automation & Tooling",
     },
+    {
+      skillName: "n8n",
+      imageLink: "./SkillsImages/n8n.png",
+      typeOfSkill: "Automation & Tooling",
+    },
   ];
 
   const uniqueSkillTypes = new Set(
@@ -110,13 +115,13 @@ const Skills: React.FC = () => {
   const filteredSkills = filterSkills(selectedType);
 
   return (
-    <div className="mb-24">
+    <div className="mb-12">
       <h1 className="text-center text-3xl md:text-5xl font-bold mt-8">
         Technical Skillset
       </h1>
       <div className="flex justify-center mb-4 md:w-[70%] mx-auto rounded-2xl my-10 flex-wrap gap-4 md:gap-1 text-xs md:text-sm">
         <button
-          className={`w-24 mx-2 px-2 py-1 rounded-md light:text-zinc-900  dark:text-zinc-200 ${
+          className={`w-24 md:w-24 mx-2 px-2 py-1 rounded-md light:text-zinc-900  dark:text-zinc-200 ${
             selectedType === "" ? "dark:bg-emerald-600 light: bg-teal-200" : ""
           }`}
           onClick={() => handleTypeClick("")}

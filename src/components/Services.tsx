@@ -1,3 +1,5 @@
+import { Button } from "./ui/button";
+
 type ServiceProps = {
   title: string;
   priceINR: number;
@@ -8,7 +10,7 @@ type ServiceProps = {
   featured?: boolean;
 };
 
-const USD_RATE = 85; // Example exchange rate, you can update this as needed
+const USD_RATE = 90; // Example exchange rate, you can update this as needed
 const formatINR = (amount: number) => `₹${amount.toLocaleString("en-IN")}`;
 
 const formatUSD = (amount: number) =>
@@ -19,14 +21,15 @@ const WhatsAppButton = ({ text }: { text: string }) => {
   const message = encodeURIComponent(text);
 
   return (
-    <a
-      href={`https://wa.me/${whatsappNumber}?text=${message}`}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-block rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-black transition hover:bg-emerald-500"
-    >
-      Discuss on WhatsApp
-    </a>
+    <Button asChild variant="CTA" size="lg">
+      <a
+        href={`https://wa.me/${whatsappNumber}?text=${message}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Discuss on WhatsApp
+      </a>
+    </Button>
   );
 };
 
@@ -80,7 +83,7 @@ const ServiceBlock = ({
 };
 
 const Services = () => (
-  <section className="mx-auto w-[90%] md:w-[70%] pt-32 pb-24">
+  <section className="mx-auto w-[90%] md:w-[70%] pt-12 pb-24">
     <h1 className="mb-6 text-center text-3xl font-bold md:text-5xl">
       Services
     </h1>
@@ -94,10 +97,10 @@ const Services = () => (
       <ServiceBlock
         title="Starter Website (Small Site)"
         priceINR={25000}
-        delivery="7–10 days"
+        delivery="7-10 days"
         description="A clean, fast website for individuals or small businesses that need a professional online presence without complexity."
         features={[
-          "Up to 3 pages (Home, About, Contact)",
+          "Up to 3 pages (Home, About, Contact, etc.)",
           "Responsive design for all devices",
           "WhatsApp inquiry button",
           "Basic SEO setup",
@@ -111,7 +114,7 @@ const Services = () => (
         priceINR={45000}
         startingFrom
         featured
-        delivery="2–3 weeks"
+        delivery="2-3 weeks"
         description="A structured, conversion-focused website designed to clearly present your services and generate consistent inquiries. Additional pages can be added if required."
         features={[
           "Up to 6 pages (Home, About, Services, Contact, etc.)",
@@ -128,10 +131,10 @@ const Services = () => (
         title="Advanced Website (Large Site)"
         priceINR={75000}
         startingFrom
-        delivery="4–5 weeks"
+        delivery="4-5 weeks"
         description="A feature-rich website for growing businesses that need advanced pages, integrations, and long-term scalability."
         features={[
-          "8–12 pages or dynamic sections",
+          "8-12 pages or dynamic sections",
           "Advanced UI interactions & animations",
           "CMS or admin-controlled content (if required)",
           "Multiple lead capture flows",
@@ -151,7 +154,6 @@ const Services = () => (
           "Compelling hero + CTA design",
           "Lead capture form with notifications",
           "Analytics setup (Google Analytics)",
-          "A/B readiness (optional)",
           "Fast performance optimization",
         ]}
       />
@@ -177,10 +179,10 @@ const Services = () => (
         title="AI Workflow & Tool Integrations"
         priceINR={35000}
         startingFrom
-        delivery="2–3 weeks"
+        delivery="2-3 weeks"
         description="Automation workflows that connect systems, reduce manual work, and streamline operations."
         features={[
-          "n8n / Zapier workflows",
+          "Custom AI workflows",
           "Custom API integrations",
           "AI task helpers",
           "Webhook triggers",
@@ -208,10 +210,10 @@ const Services = () => (
       separately unless stated otherwise.
     </p>
     <p className="mt-2 text-center text-xs text-neutral-600">
-      All projects follow a defined scope, timeline, and handover process.
+      USD prices are approximate and calculated using a reference exchange rate.
     </p>
     <p className="mt-2 text-center text-xs text-neutral-600">
-      USD prices are approximate and calculated using a reference exchange rate.
+      All projects follow a defined scope, timeline, and handover process.
     </p>
   </section>
 );
