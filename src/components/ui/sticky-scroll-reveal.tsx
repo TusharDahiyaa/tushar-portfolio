@@ -40,7 +40,7 @@ export const StickyScroll = ({
         }
         return acc;
       },
-      0
+      0,
     );
     setActiveCard(closestBreakpointIndex);
   });
@@ -134,15 +134,15 @@ export const StickyScroll = ({
         }}
         className={cn(
           "hidden lg:block h-fit w-80 rounded-[22px] bg-white md:sticky top-20 overflow-hidden z-10",
-          contentClassName
+          contentClassName,
         )}
       >
         {content[activeCard]?.content ?? null}
       </motion.div>
-      <div className="scroll-downs absolute flex top-2 inset-x-0 left-1/3 md:left-[45%]">
+      <div className="scroll-downs absolute flex top-2 inset-x-0 left-[40%] md:left-[45%]">
         <motion.div className="z-0 mousey">
           <div className="scroller" />
-          <p className="relative text-sm text-center bottom-5 left-7">
+          <p className="relative text-xs text-center bottom-5 left-7">
             Scroll for more
           </p>
         </motion.div>

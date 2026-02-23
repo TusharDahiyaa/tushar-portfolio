@@ -34,11 +34,6 @@ const Skills: React.FC = () => {
       imageLink: "./SkillsImages/tailwind-css.svg",
       typeOfSkill: "Frontend Systems",
     },
-    {
-      skillName: "Bootstrap",
-      imageLink: "./SkillsImages/bootstrap.png",
-      typeOfSkill: "Frontend Systems",
-    },
 
     // Backend & APIs
     {
@@ -88,7 +83,7 @@ const Skills: React.FC = () => {
 
     // Automation & Tooling
     {
-      skillName: "AI Automation",
+      skillName: "Automation Systems",
       imageLink: "./SkillsImages/workflow_pilot_logo.png",
       typeOfSkill: "Automation & Tooling",
     },
@@ -117,8 +112,11 @@ const Skills: React.FC = () => {
   return (
     <div className="mb-12">
       <h1 className="text-center text-3xl md:text-5xl font-bold mt-8">
-        Technical Skillset
+        Systems & Tools
       </h1>
+      <p className="mt-4 text-center text-neutral-400 md:text-lg w-[80%] md:w-[60%] mx-auto">
+        Tools I use to design, build, deploy, and maintain production systems.
+      </p>
       <div className="flex justify-center mb-4 md:w-[70%] mx-auto rounded-2xl my-10 flex-wrap gap-4 md:gap-1 text-xs md:text-sm">
         <button
           className={`w-24 md:w-24 mx-2 px-2 py-1 rounded-md light:text-zinc-900  dark:text-zinc-200 ${
@@ -126,7 +124,7 @@ const Skills: React.FC = () => {
           }`}
           onClick={() => handleTypeClick("")}
         >
-          All
+          Overview
         </button>
         {Array.from(uniqueSkillTypes).map((type) => (
           <button

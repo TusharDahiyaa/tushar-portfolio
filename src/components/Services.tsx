@@ -67,6 +67,9 @@ const ServiceBlock = ({
           )}
         </p>
         <p className="text-sm text-neutral-400">Delivery: {delivery}</p>
+        <p className="text-xs text-neutral-500">
+          Timeline depends on final scope and content readiness.
+        </p>
       </div>
 
       <p className="mb-6 text-neutral-300">{description}</p>
@@ -97,7 +100,7 @@ const Services = () => (
       <ServiceBlock
         title="Starter Website (Small Site)"
         priceINR={25000}
-        delivery="7-10 days"
+        delivery="5-7 business days"
         description="A clean, fast website for individuals or small businesses that need a professional online presence without complexity."
         features={[
           "Up to 3 pages (Home, About, Contact, etc.)",
@@ -114,7 +117,7 @@ const Services = () => (
         priceINR={45000}
         startingFrom
         featured
-        delivery="2-3 weeks"
+        delivery="10-14 business days"
         description="A structured, conversion-focused website designed to clearly present your services and generate consistent inquiries. Additional pages can be added if required."
         features={[
           "Up to 6 pages (Home, About, Services, Contact, etc.)",
@@ -131,7 +134,7 @@ const Services = () => (
         title="Advanced Website (Large Site)"
         priceINR={75000}
         startingFrom
-        delivery="4-5 weeks"
+        delivery="3-4 weeks"
         description="A feature-rich website for growing businesses that need advanced pages, integrations, and long-term scalability."
         features={[
           "8-12 pages or dynamic sections",
@@ -148,7 +151,7 @@ const Services = () => (
       <ServiceBlock
         title="Landing Page + Lead Capture"
         priceINR={20000}
-        delivery="1 week"
+        delivery="3-5 business days"
         description="High-conversion landing page tailored to one offer, campaign, or product with lead capture and tracking."
         features={[
           "Compelling hero + CTA design",
@@ -179,7 +182,7 @@ const Services = () => (
         title="AI Workflow & Tool Integrations"
         priceINR={35000}
         startingFrom
-        delivery="2-3 weeks"
+        delivery="1-2 weeks"
         description="Automation workflows that connect systems, reduce manual work, and streamline operations."
         features={[
           "Custom AI workflows",

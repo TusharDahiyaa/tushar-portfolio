@@ -58,7 +58,9 @@
     transparent
   );
 
-  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
     var(--main-bg) border-box;
 
   background-position: center center;
@@ -92,8 +94,8 @@
 
 .mousey {
   width: 3px;
-  padding: 10px 15px;
-  height: 35px;
+  padding: 6px 12px;
+  height: 30px;
   border: 2px solid #fff;
   border-radius: 25px;
   opacity: 0.75;
