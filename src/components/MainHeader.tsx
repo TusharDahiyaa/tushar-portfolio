@@ -5,41 +5,48 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BackgroundBeams } from "./ui/background-beams";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const MainHeader: React.FC = () => {
   const words = [
-    { text: "I" },
-    { text: "build" },
-    { text: "Full-Stack" },
-    { text: "Systems" },
+    { text: "Websites" },
     { text: "and" },
-    { text: "AI" },
-    { text: "Automations" },
-    { text: "for" },
-    { text: "Real" },
-    { text: "Businesses." },
+    { text: "automation" },
+    { text: "systems" },
+    { text: "that" },
+    { text: "help" },
+    { text: "businesses" },
+    { text: "get" },
+    { text: "more" },
+    { text: "customers." },
   ];
 
   const paragraphHeader =
-    "I design scalable web platforms and AI-driven automations that reduce manual work, streamline operations, and drive measurable business growth.";
+    "I build fast, simple websites and smart automations that capture leads and reduce manual work.";
 
   return (
     <div className="h-dvh md:w-full rounded-md dark:bg-neutral-950 flex flex-col items-center justify-center antialiased pt-20 md:pt-20">
       <div className="md:flex items-center justify-between mx-auto w-[90%] md:w-[70%]">
-        <div className="text-center mx-auto w-[90%] md:w-[80%]">
+        <div className="relative z-10 text-center mx-auto w-[90%] md:w-[75%]">
           <h1 className="w-full font-semibold mb-5">
             <TypewriterEffect words={words} />
           </h1>
           <TextGenerateEffect words={paragraphHeader} />
-          <motion.p
+
+          <a
+            href="#projects"
+            className="mx-auto mt-5 inline-flex gap-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-all hover:scale-110"
+          >
+            View My Work
+          </a>
+          {/* <motion.p
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
             className="mt-5 text-xs md:text-sm font-semibold tracking-wide text-neutral-400"
           >
             Real Estate Platforms • CRM & CMS Systems • AI Workflow Automation
-          </motion.p>
+          </motion.p> */}
 
           <div className="flex items-center mt-5 justify-center flex-wrap gap-1 lg:gap-5">
             {/* <a

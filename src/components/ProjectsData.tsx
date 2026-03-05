@@ -10,6 +10,25 @@ const projectsData = [
     liveLink: "https://www.a1brotherscleaning.com",
   },
   {
+    img: "./images/elmforminteriors.png",
+    title: "Elm & Form Interiors",
+    description: `A modern interior design studio website focused on showcasing portfolio projects and generating consultation enquiries. 
+  Built with a clean, minimal interface highlighting design projects through visual galleries and structured service sections. 
+  Includes project showcase, design services overview, client testimonials, and a consultation enquiry form. 
+  Optimized for responsive performance and smooth user experience across devices.`,
+    githubLink: "https://github.com/tushardahiyaa/Elm-Form-Interiors",
+    liveLink: "https://elmandforminteriors.vercel.app",
+  },
+  {
+    img: "./images/flingtoring.png",
+    title: "Fling To Ring Weddings",
+    description: `A multi-page wedding photography business website designed to capture booking enquiries from engaged couples. 
+  Features elegant gallery layouts, storytelling sections, service packages, testimonials, and a dedicated availability enquiry form. 
+  Built with a focus on visual presentation, conversion-oriented call-to-actions, and fully responsive design for mobile and desktop users.`,
+    githubLink: "https://github.com/tushardahiyaa/flingtoring",
+    liveLink: "https://flingtoring.vercel.app",
+  },
+  {
     img: "./images/skylinerealty.png",
     title: "Skyline Realty with CMS",
     description: `A full-featured real estate platform with role-based authentication including Admin, Agent, and User logins. 
