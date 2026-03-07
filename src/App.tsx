@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact";
 import Footer from "./components/Footer";
 import { useRef } from "react";
 import Services from "./components/Services";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const homeRef = useRef(null);
@@ -55,6 +56,7 @@ function App() {
         <Contact />
       </div>
       <Footer />
+      <Analytics />
     </>
   );
 }
