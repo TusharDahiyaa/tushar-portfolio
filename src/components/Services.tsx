@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 type ServiceProps = {
   title: string;
-  priceINR: number;
+  priceUSD: number;
   delivery: string;
   description: string;
   features: string[];
@@ -10,14 +10,10 @@ type ServiceProps = {
   featured?: boolean;
 };
 
-const USD_RATE = 90; // Example exchange rate, you can update this as needed
-const formatINR = (amount: number) => `₹${amount.toLocaleString("en-IN")}`;
-
-const formatUSD = (amount: number) =>
-  `≈ $${Math.round(amount / USD_RATE).toLocaleString("en-US")}`;
+const formatUSD = (amount: number) => `$${amount.toLocaleString("en-US")}`;
 
 const WhatsAppButton = ({ text }: { text: string }) => {
-  const whatsappNumber = "919211591677"; // replace with your number
+  const whatsappNumber = "919211591677";
   const message = encodeURIComponent(text);
 
   return (
@@ -27,7 +23,7 @@ const WhatsAppButton = ({ text }: { text: string }) => {
         target="_blank"
         rel="noreferrer"
       >
-        Discuss on WhatsApp
+        Discuss Project
       </a>
     </Button>
   );
@@ -35,14 +31,15 @@ const WhatsAppButton = ({ text }: { text: string }) => {
 
 const ServiceBlock = ({
   title,
-  priceINR,
+  priceUSD,
   delivery,
   description,
   features,
   startingFrom = false,
   featured = false,
 }: ServiceProps) => {
-  const prefill = `Hi, I’d like to discuss the ${title}.`;
+  const prefill = `Hi, I'd like to discuss the ${title}.`;
+
   return (
     <div className="rounded-3xl border border-neutral-800 bg-neutral-950 p-8">
       <div className="mb-6 flex flex-col gap-2">
@@ -51,14 +48,13 @@ const ServiceBlock = ({
             Most Popular
           </span>
         )}
+
         <h3 className="text-2xl font-bold">{title}</h3>
+
         <p className="text-xl font-semibold text-emerald-400">
-          {formatINR(priceINR)}
+          {formatUSD(priceUSD)}
           {startingFrom && "+"}
-          <span className="ml-2 text-sm font-normal text-neutral-400">
-            ({formatUSD(priceINR)}
-            {startingFrom && "+"})
-          </span>
+
           {title === "Maintenance & Support" && (
             <span className="text-sm font-normal text-neutral-400">
               {" "}
@@ -66,9 +62,11 @@ const ServiceBlock = ({
             </span>
           )}
         </p>
+
         <p className="text-sm text-neutral-400">Delivery: {delivery}</p>
+
         <p className="text-xs text-neutral-500">
-          Timeline depends on final scope and content readiness.
+          Timeline depends on project scope and content readiness.
         </p>
       </div>
 
@@ -92,38 +90,39 @@ const Services = () => (
     </h1>
 
     <p className="mx-auto mb-20 max-w-2xl text-center text-neutral-500 md:text-lg">
-      Choose the system that fits your business goals. Prices, timelines, and
-      deliverables are clear so you know what you’re buying.
+      Choose the system that fits your business goals. Each project is built to
+      generate enquiries, improve your online presence, and support long-term
+      growth.
     </p>
 
     <div className="grid gap-12">
       <ServiceBlock
         title="Starter Website (Small Site)"
-        priceINR={25000}
-        delivery="5-7 business days"
-        description="A clean, fast website for individuals or small businesses that need a professional online presence without complexity."
+        priceUSD={450}
+        delivery="5–7 business days"
+        description="A clean, fast website for individuals or small businesses that need a professional online presence without unnecessary complexity."
         features={[
-          "Up to 3 pages (Home, About, Contact, etc.)",
-          "Responsive design for all devices",
-          "WhatsApp inquiry button",
+          "Up to 3 pages (Home, About, Contact)",
+          "Responsive design for mobile and desktop",
+          "Lead capture with WhatsApp or contact form",
           "Basic SEO setup",
-          "Fast-loading, lightweight build",
-          "Deployment & go-live support",
+          "Fast-loading lightweight build",
+          "Deployment and go-live support",
         ]}
       />
 
       <ServiceBlock
         title="Business Website (Medium Site)"
-        priceINR={45000}
+        priceUSD={900}
         startingFrom
         featured
-        delivery="10-14 business days"
-        description="A structured, conversion-focused website designed to clearly present your services and generate consistent inquiries. Additional pages can be added if required."
+        delivery="10–14 business days"
+        description="A structured, conversion-focused website designed to clearly present your services and consistently generate client enquiries."
         features={[
-          "Up to 6 pages (Home, About, Services, Contact, etc.)",
+          "Up to 6 pages (Home, About, Services, Contact)",
           "Custom design aligned with your brand",
           "Mobile-first responsive layout",
-          "WhatsApp + form-based lead capture",
+          "Lead capture forms and enquiry flows",
           "SEO foundations (meta tags, sitemap, schema)",
           "Performance optimization",
           "Production deployment",
@@ -132,89 +131,74 @@ const Services = () => (
 
       <ServiceBlock
         title="Advanced Website (Large Site)"
-        priceINR={75000}
+        priceUSD={1600}
         startingFrom
-        delivery="3-4 weeks"
-        description="A feature-rich website for growing businesses that need advanced pages, integrations, and long-term scalability."
+        delivery="3–4 weeks"
+        description="A scalable website for growing businesses that require advanced features, integrations, and flexible content structures."
         features={[
-          "8-12 pages or dynamic sections",
-          "Advanced UI interactions & animations",
+          "8–12 pages or dynamic sections",
+          "Advanced UI interactions and animations",
           "CMS or admin-controlled content (if required)",
           "Multiple lead capture flows",
           "Enhanced SEO structure",
           "Scalable architecture",
-          "Priority deployment & handover",
+          "Priority deployment and handover",
         ]}
       />
 
-      {/* Landing Page + Lead Capture */}
       <ServiceBlock
         title="Landing Page + Lead Capture"
-        priceINR={20000}
-        delivery="3-5 business days"
-        description="High-conversion landing page tailored to one offer, campaign, or product with lead capture and tracking."
+        priceUSD={350}
+        delivery="3–5 business days"
+        description="A high-conversion landing page focused on a single offer, product, or marketing campaign."
         features={[
-          "Compelling hero + CTA design",
+          "Conversion-focused hero section and CTAs",
           "Lead capture form with notifications",
-          "Analytics setup (Google Analytics)",
+          "Analytics setup",
           "Fast performance optimization",
         ]}
       />
 
-      {/* Web App / SaaS MVP
-      <ServiceBlock
-        title="Web App / SaaS MVP"
-        price="₹1,25,000+"
-        delivery="6–8 weeks"
-        description="Minimum viable product for your SaaS idea with auth, database, roles, and core features."
-        features={[
-          "User authentication & roles",
-          "PostgreSQL/MongoDB data layer",
-          "Dashboard + user flows",
-          "API design & documentation",
-          "Basic analytics",
-          "Deployable and maintainable stack",
-        ]}
-      /> */}
-
-      {/* AI-Enhanced Workflow & Integrations */}
       <ServiceBlock
         title="AI Workflow & Tool Integrations"
-        priceINR={35000}
+        priceUSD={700}
         startingFrom
-        delivery="1-2 weeks"
-        description="Automation workflows that connect systems, reduce manual work, and streamline operations."
+        delivery="1–2 weeks"
+        description="Automation systems that connect tools, eliminate repetitive work, and streamline business processes."
         features={[
           "Custom AI workflows",
-          "Custom API integrations",
-          "AI task helpers",
+          "API integrations between tools",
+          "AI task helpers and assistants",
           "Webhook triggers",
-          "Alert & task automation",
+          "Automated alerts and task handling",
         ]}
       />
 
-      {/* Maintenance & Support Plans */}
       <ServiceBlock
         title="Maintenance & Support"
-        priceINR={5000}
+        priceUSD={60}
         delivery="Ongoing"
-        description="Keep your site secure, updated, and running smoothly with monthly maintenance."
+        description="Monthly maintenance to keep your website secure, updated, and performing reliably."
         features={[
-          "Uptime & monitoring",
-          "CMS updates & backups",
-          "Bug fixes & small tweaks",
-          "Priority WhatsApp support",
-          "Does not include new features or redesigns",
+          "Uptime monitoring",
+          "Updates and backups",
+          "Bug fixes and small improvements",
+          "Priority support",
+          "Does not include major redesigns or new features",
         ]}
       />
     </div>
+
     <p className="mt-16 text-center text-sm text-neutral-500">
-      Hosting, domain, paid tools, and third-party services are billed
-      separately unless stated otherwise.
+      Projects start at the listed price and may vary based on scope,
+      integrations, or additional pages.
     </p>
+
     <p className="mt-2 text-center text-xs text-neutral-600">
-      USD prices are approximate and calculated using a reference exchange rate.
+      Hosting, domain, and third-party services are billed separately unless
+      explicitly included in the project scope.
     </p>
+
     <p className="mt-2 text-center text-xs text-neutral-600">
       All projects follow a defined scope, timeline, and handover process.
     </p>
